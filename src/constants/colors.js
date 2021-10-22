@@ -1,0 +1,22 @@
+export default [
+    'primary',
+    'primary-focus',
+    'primary-content',
+    'secondary',
+    'secondary-focus',
+    'secondary-content',
+    'accent',
+    'accent-focus',
+    'accent-content',
+    'neutral',
+    'neutral-focus',
+    'neutral-content',
+    'base-100',
+    'base-200',
+    'base-300',
+    'base-content',
+    'info',
+    'success',
+    'warning',
+    'error'
+]

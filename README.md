@@ -23,7 +23,7 @@ A Vue 3 library for a awesome design package [DaisyUI](https://daisyui.com/)
 - [ ] App bar
 - [ ] Avatar
     - [ ] Avatar group
-- [ ] Badge
+- [x] Badge
 - [ ] Banner
 - [ ] Breadcrumb
 - [x] Button

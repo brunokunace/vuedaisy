@@ -27,7 +27,7 @@ A Vue 3 library for a awesome design package [DaisyUI](https://daisyui.com/)
 - [ ] Banner
 - [ ] Breadcrumb
 - [x] Button
-    - [ ] Button group
+    - [x] Button group
 - [ ] Calendar
 - [ ] Carousel
 - [ ] Card

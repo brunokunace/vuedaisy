@@ -14,8 +14,6 @@ export default {
 <script setup>
 import { computed } from 'vue'
 import { colorProps, sizeProps, loadingProps } from '../composables/useProps'
-import { colorsClass } from '../composables/useColors'
-import { sizeClass } from '../composables/useSizes'
 const index = 'btn'
 const props = defineProps({
   ...colorProps(),
@@ -70,62 +68,23 @@ const props = defineProps({
     default: false
   }
 })
-const outlineClass = computed(() => {
-  return props.outline ? `${index}-outline` : null
-})
-const wideClass = computed(() => {
-  return props.wide ? `${index}-wide` : null
-})
-const blockClass = computed(() => {
-  return props.block ? `${index}-block` : null
-})
-const circleClass = computed(() => {
-  return props.circle ? `${index}-circle` : null
-})
-const squareClass = computed(() => {
-  return props.square ? `${index}-square` : null
-})
-const ghostClass = computed(() => {
-  return props.ghost ? `${index}-ghost` : null
-})
-const linkClass = computed(() => {
-  return props.link ? `${index}-link` : null
-})
-const activeClass = computed(() => {
-  return props.active ? `${index}-active` : null
-})
-const disabledClass = computed(() => {
-  return props.disabled ? `${index}-disabled` : null
-})
-const loadingClass = computed(() => {
-  return props.loading ? 'loading' : null
-})
-const glassClass = computed(() => {
-  return props.glass ? 'glass' : null
-})
-const noAnimationClass = computed(() => {
-  return props.noAnimation ? 'no-animation' : null
-})
+
 const classes = computed(() => {
-  return [
-    colorsClass(props.color, index).value,
-    sizeClass(props.size, index).value,
-    outlineClass.value,
-    loadingClass.value,
-    wideClass.value,
-    blockClass.value,
-    circleClass.value,
-    squareClass.value,
-    ghostClass.value,
-    linkClass.value,
-    activeClass.value,
-    disabledClass.value,
-    glassClass.value,
-    noAnimationClass.value
-  ]
+  return {
+      [`${index}-${props.color}`]: true,
+      [`${index}-${props.size}`]: true,
+      [`${index}-outline`]: props.outline,
+      [`${index}-wide`]: props.wide,
+      [`${index}-block`]: props.block,
+      [`${index}-circle`]: props.circle,
+      [`${index}-square`]: props.square,
+      [`${index}-ghost`]: props.ghost,
+      [`${index}-link`]: props.link,
+      [`${index}-active`]: props.active,
+      [`${index}-disabled`]: props.disabled,
+      [`loading`]: props.loading,
+      [`glass`]: props.glass,
+      [`no-animation`]: props.noAnimation
+}
 })
 </script>
-
-
-<style scoped>
-</style>

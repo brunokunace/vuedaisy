@@ -5,7 +5,3 @@ import DsButton from './components/DsButton.vue'
 <template>
   <ds-button text="DaisyUi" />
 </template>
-
-<style>
-
-</style>

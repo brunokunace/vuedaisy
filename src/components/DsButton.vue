@@ -1,17 +1,21 @@
 <template>
-  <button class="btn" :class="classes" :disabled="props.disabled">
+  <button
+    class="btn"
+    :class="classes"
+    :disabled="props.disabled"
+  >
     <slot>
       {{ props.text }}
     </slot>
   </button>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'DsButton'
 }
 </script>
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 import { colorProps, sizeProps, loadingProps } from '../composables/useProps'
 const index = 'btn'
@@ -65,7 +69,7 @@ const props = defineProps({
   },
   noAnimation: {
     type: Boolean,
-    default: false
+    default: false,
   }
 })
 

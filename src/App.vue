@@ -9,7 +9,12 @@ import DsBadge from './components/DsBadge.vue'
     <ds-button text="DaisyUi" />
     <ds-button text="DaisyUi">
       Mails
-      <ds-badge color="accent" class="ml-2">+99</ds-badge>
+      <ds-badge
+        color="accent"
+        class="ml-2"
+      >
+        +99
+      </ds-badge>
     </ds-button>
     <ds-button text="DaisyUi" />
   </ds-button-group>

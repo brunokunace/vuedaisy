@@ -1,17 +1,20 @@
 <template>
-  <div class="badge" :class="classes">
+  <div
+    class="badge"
+    :class="classes"
+  >
     <slot>
       {{ props.text }}
     </slot>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'DsBadge'
 }
 </script>
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 import { colorProps, sizeProps } from '../composables/useProps'
 const index = 'badge'
